@@ -18,6 +18,68 @@ for i in range(5):
     print('On this iteration, i is set to ' + str(i))
 print('Goodbye!')
 
+Here is the complete output of the program:
+
+Hello!
+On this iteration, i is set to 0
+On this iteration, i is set to 1
+On this iteration, i is set to 2
+On this iteration, i is set to 3
+On this iteration, i is set to 4
+
+Goodbye!
+_____________________________________________________________________________________________________
+import sys
+
+while True:
+    print('Type exit to exit.')
+    response = input('>')
+    if response == 'exit':
+        sys.exit()
+    print('You typed ' + response + '.')
+
+Type exit to exit.
+>hello
+You typed hello.
+Type exit to exit.
+>python
+You typed python.
+Type exit to exit.
+>exit
+
+
+# this is a guess the number game
+import random
+secret_number = random.randint(1, 20)
+print("I am thinking of a number between 1 and 20.")
+# ask the player to guess 6 times
+
+for guess_taken in range(1, 7):
+    print("Take a guess.")
+    guess = int(input('>'))
+    
+    if guess < secret_number:
+        print("Your guess is too low.")
+    elif guess > secret_number:
+        print("Your guess is too high.")
+    else:
+        break  # this condition is the correct guess
+if guess == secret_number:
+    print(f"Good job! You guessed my number in {guess_taken} guesses!") 
+else:
+    print(f"Nope. The number I was thinking of was {secret_number}")
+
+I am thinking of a number between 1 and 20.
+Take a guess.
+>20
+Your guess is too high.
+Take a guess.
+>10
+Your guess is too high.
+Take a guess.
+>5
+Good job! You guessed my number in 3 guesses!
+
 
 
 
